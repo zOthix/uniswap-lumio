@@ -105,6 +105,7 @@ const StyledBalanceMax = styled.button`
 
   :hover {
     background-color: ${({ theme }) => theme.primary3};
+    color: ${({ theme }) => theme.white};
   }
   :focus {
     outline: none;

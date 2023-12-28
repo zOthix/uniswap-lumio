@@ -46,7 +46,7 @@ export default function Toggle({ id, isActive, toggle }: ToggleProps) {
       <ToggleElement isActive={isActive} isOnSwitch={true}>
         On
       </ToggleElement>
-      <ToggleElement isActive={!isActive} isOnSwitch={false}>
+      <ToggleElement isActive={!isActive} isOnSwitch={true}>
         Off
       </ToggleElement>
     </StyledToggle>

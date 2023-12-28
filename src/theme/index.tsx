@@ -43,7 +43,7 @@ export function colors(darkMode: boolean): Colors {
     // text
     text1: darkMode ? '#FFFFFF' : '#000000',
     text2: darkMode ? '#C3C5CB' : '#565A69',
-    text3: darkMode ? '#6C7284' : '#888D9B',
+    text3: darkMode ? '#dee4f3' : '#888D9B',
     text4: darkMode ? '#565A69' : '#C3C5CB',
     text5: darkMode ? '#2C2F36' : '#EDEEF2',
 
@@ -52,18 +52,18 @@ export function colors(darkMode: boolean): Colors {
     bg2: darkMode ? '#27292e' : '#ededed',
     bg3: darkMode ? '#3a3d47' : '#e6e6e8',
     bg4: darkMode ? '#4c4f5c' : '#CED0D9',
-    bg5: darkMode ? '#6C7284' : '#888D9B',
+    bg5: darkMode ? '#FFFFFF' : '#888D9B',
 
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: '#2792d6',
+    primary1: '#6E42CA',
     primary2: '#3099db',
-    primary3: '#389fe0',
-    primary4: '#54afe8',
-    primary5: '#5fb3e8',
+    primary3: '#6E42CA',
+    primary4: '#6E42CA',
+    primary5: '#6E42CA',
 
     // color text
     primaryText1: darkMode ? '#fff' : '#000',
@@ -217,9 +217,9 @@ body {
   background-position: 0 -30vh;
   background-repeat: no-repeat;
   background-image: ${({ theme }) =>
-    `radial-gradient(50% 50% at 50% 50%, ${transparentize(0.8, theme.primary1)} 0%, ${transparentize(
+    `radial-gradient(50% 50% at 50% 50%, ${transparentize(0.8, '#28253E')} 0%, ${transparentize(
       1,
-      theme.bg1
+     '#28253E'
     )} 100%)`};
 }
 `;
