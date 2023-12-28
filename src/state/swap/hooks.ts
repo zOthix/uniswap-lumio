@@ -277,7 +277,6 @@ export function useDefaultsFromURLSearch():
     );
 
     setResult({ inputCurrencyId: parsed[Field.INPUT].currencyId, outputCurrencyId: parsed[Field.OUTPUT].currencyId });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, chainId]);
 
   return result;

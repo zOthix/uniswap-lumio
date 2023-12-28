@@ -1,7 +1,32 @@
-# CoolSwap template
+# Uniswap V2 (CoolSwap-interface) Fork
 
-### Rinkeby
+Welcome to the Uniswap V2 ( CoolSwap-interface ) fork project! This is a customized version of Uniswap V2, designed to suit specific requirements or enhancements. Below you will find the necessary steps to set up and run the project.
 
-- Factory: 0x6Bd5A1A63ffF10De3c6B7C667040E9AE1B47fDf2
-- Router: 0xA4E1f3fD10E2397f58926E215Ed331D7cDA14056
-- Pair hash: 0xaf88dd15a55596feb9d67243c727bfd6144af12453963809bc91f0cfcf8241bc
+## Prerequisites
+
+- Node.js =v16
+- npm (Node Package Manager)
+
+## Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/zOthix/uniswap-lumio.git
+   ```
+
+2. **Navigate to the project directory**
+    ```bash
+    cd uniswap-lumio
+    ```
+3. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+## Running the Application
+
+   ```bash
+   npm run start
+   ```
+This command will initiate the Uniswap V2 fork and start the application. Once the application is up and running, you can access the application via the specified endpoint (e.g., http://localhost:3000).

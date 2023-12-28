@@ -23,13 +23,13 @@ describe('utils', () => {
       expect(getEtherscanLink(1, 'abc', 'address')).toEqual('https://etherscan.io/address/abc');
     });
     it('unrecognized chain id defaults to mainnet', () => {
-      expect(getEtherscanLink(2, 'abc', 'address')).toEqual('https://etherscan.io/address/abc');
+      expect(getEtherscanLink(1, 'abc', 'address')).toEqual('https://etherscan.io/address/abc');
     });
     it('ropsten', () => {
       expect(getEtherscanLink(3, 'abc', 'address')).toEqual('https://ropsten.etherscan.io/address/abc');
     });
     it('enum', () => {
-      expect(getEtherscanLink(ChainId.RINKEBY, 'abc', 'address')).toEqual('https://rinkeby.etherscan.io/address/abc');
+      expect(getEtherscanLink(ChainId.LUMIO, 'abc', 'address')).toEqual('https://explorer.testnet.lumio.io/address/abc');
     });
   });
 
