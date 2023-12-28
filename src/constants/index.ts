@@ -50,7 +50,7 @@ export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
   [ChainId.ROPSTEN]: [WETH[ChainId.ROPSTEN]],
-  [9990]: [WETH[9990]],
+  [ChainId.LUMIO]: [WETH[ChainId.LUMIO]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
 };
@@ -59,7 +59,7 @@ const WETH_ONLY: ChainTokenList = {
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR, WBTC],
-  [9990]: [...WETH_ONLY[9990], LUMIO_USDC, LUMIO_USDT]
+  [ChainId.LUMIO]: [...WETH_ONLY[ChainId.LUMIO], LUMIO_USDC, LUMIO_USDT]
 };
 
 /**
@@ -76,7 +76,7 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, WBTC],
-  [9990]: [...WETH_ONLY[9990]]
+  [ChainId.LUMIO]: [...WETH_ONLY[ChainId.LUMIO], LUMIO_USDC, LUMIO_USDT]
 };
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -84,7 +84,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDC, USDT, WBTC],
   [ChainId.ROPSTEN]: [...WETH_ONLY[ChainId.ROPSTEN]],
-  [9990]: [...WETH_ONLY[9990], LUMIO_USDC, LUMIO_USDT],
+  [ChainId.LUMIO]: [...WETH_ONLY[ChainId.LUMIO], LUMIO_USDC, LUMIO_USDT],
   [ChainId.GÖRLI]: [...WETH_ONLY[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [...WETH_ONLY[ChainId.KOVAN]],
 };
