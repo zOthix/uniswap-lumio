@@ -84,7 +84,7 @@ const HeaderLinks = styled(Row)`
     rgba(0, 0, 0, 0.01) 0px 24px 32px;
   background-color: ${({ theme }) => theme.bg1};
 
-  ${({ theme }) => theme.mediaWidth.upToLarge`
+  ${({ theme }) => theme.mediaWidth.upToExtraLarge`
     margin: 0;
     margin-right: auto;
   `};
@@ -119,7 +119,7 @@ const AccountElement = styled.div<{ active: boolean }>`
 `;
 
 const HideSmall = styled.span`
-  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
+  ${({ theme }) => theme.mediaWidth.upToSmall`
     display: none;
   `};
 `;
