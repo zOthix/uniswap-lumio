@@ -93,6 +93,7 @@
   "dependencies": {
     "@types/lodash": "^4.14.74",
     "@uniswap/default-token-list": "2.0.0",
+    "@web3modal/ethers5": "^3.5.3",
     "dotenv": "10.0.0",
     "web3-utils": "1.5.3"
   },
