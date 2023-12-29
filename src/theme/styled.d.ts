@@ -59,6 +59,7 @@ declare module 'styled-components' {
 
     // shadows
     shadow1: string;
+    shadow2: string;
 
     // media queries
     mediaWidth: {

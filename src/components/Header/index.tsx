@@ -16,6 +16,7 @@ import { LightCard } from '../Card';
 import { Moon, Sun } from 'react-feather';
 import Row, { RowFixed } from '../Row';
 import Web3Status from '../Web3Status';
+import { ClaimButton, ClaimIcon } from 'components/Button';
 
 const HeaderFrame = styled.div`
   width: 100vw;
@@ -289,6 +290,10 @@ export default function Header() {
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
           </HideSmall>
+          <ClaimButton onClick={() => window.open('https://claim.lumio.io/')}>
+            <ClaimIcon />
+            <HideSmall>Claim Gas</HideSmall>
+          </ClaimButton>
           <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
             {account && userEthBalance ? (
               <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
