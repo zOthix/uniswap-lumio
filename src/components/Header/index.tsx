@@ -89,7 +89,7 @@ const HeaderLinks = styled(Row)`
     margin-right: auto;
   `};
 
-  ${({ theme }) => theme.mediaWidth.upToSmall`
+  ${({ theme }) => theme.mediaWidth.upToMedium`
     position: fixed;
     bottom: 0;
     padding: .5rem;
