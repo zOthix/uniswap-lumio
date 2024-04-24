@@ -36,6 +36,8 @@ async function fetchChunk(
     [resultsBlockNumber, returnData] = await multicallContract.aggregate(
       chunk.map((obj) => [obj.address, obj.callData])
     );
+
+    console.log("resultsBlockNumber, returnData ", resultsBlockNumber, returnData);
   } catch (error) {
     console.debug('Failed to fetch chunk inside retry', error);
     throw error;
@@ -159,6 +161,7 @@ export default function Updater(): null {
     cancellations.current = {
       blockNumber: latestBlockNumber,
       cancellations: chunkedCalls.map((chunk, index) => {
+        console.log("multicallContract, chunk, latestBlockNumber ", multicallContract, chunk, latestBlockNumber);
         const { cancel, promise } = retry(() => fetchChunk(multicallContract, chunk, latestBlockNumber), {
           n: Infinity,
           minWait: 2500,

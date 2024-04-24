@@ -66,7 +66,17 @@ export function listToTokenMap(list: TokenList): TokenAddressMap {
           })
           ?.filter((x): x is TagInfo => Boolean(x)) ?? [];
       const token = new WrappedTokenInfo(tokenInfo, tags);
-      if (tokenMap[token.chainId][token.address] !== undefined) throw Error('Duplicate tokens.');
+      if(token == undefined || token?.chainId === undefined || token?.address == undefined){
+        console.log("token || token?.chainId || token?.address ", token);
+      }
+try{
+  if (tokenMap[token.chainId][token.address] !== undefined) throw Error('Duplicate tokens.');
+}catch(error){
+  debugger;
+  console.log("some error ", error)
+  console.log("tokenMap[token.chainId][token.address] ",tokenMap[token.chainId][token.address])
+
+}
       return {
         ...tokenMap,
         [token.chainId]: {
@@ -99,7 +109,7 @@ function combineMaps(map1: TokenAddressMap, map2: TokenAddressMap): TokenAddress
   return {
     1: { ...map1[1], ...map2[1] },
     3: { ...map1[3], ...map2[3] },
-    9990: { ...map1[9990], ...map2[9990] },
+    31: { ...map1[31], ...map2[31] },
     5: { ...map1[5], ...map2[5] },
     42: { ...map1[42], ...map2[42] },
   };
