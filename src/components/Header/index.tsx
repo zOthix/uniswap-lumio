@@ -242,7 +242,7 @@ export const StyledMenuButton = styled.button`
 `;
 
 const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
-  [ChainId.LUMIO]: 'lumio',
+  [ChainId.ROOTSTOCK]: 'rootstock',
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Goerli',
   [ChainId.KOVAN]: 'Kovan',
@@ -290,7 +290,7 @@ export default function Header() {
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
           </HideSmall>
-          <ClaimButton onClick={() => window.open('https://claim.lumio.io/')}>
+          <ClaimButton onClick={() => window.open('https://claim.ROOTSTOCK.io/')}>
             <ClaimIcon />
             <HideSmall>Claim Gas</HideSmall>
           </ClaimButton>

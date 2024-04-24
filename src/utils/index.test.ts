@@ -29,7 +29,7 @@ describe('utils', () => {
       expect(getEtherscanLink(3, 'abc', 'address')).toEqual('https://ropsten.etherscan.io/address/abc');
     });
     it('enum', () => {
-      expect(getEtherscanLink(ChainId.LUMIO, 'abc', 'address')).toEqual('https://rootstock-testnet.blockscout.com/address/abc');
+      expect(getEtherscanLink(ChainId.ROOTSTOCK, 'abc', 'address')).toEqual('https://rootstock-testnet.blockscout.com/address/abc');
     });
   });
 
